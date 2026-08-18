@@ -1,0 +1,13 @@
+{
+  "name": "pas-photo-production-manager",
+  "private": true,
+  "version": "2.3.0",
+  "description": "Internal CEP extension for Adobe Illustrator pas-photo production workflow",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "validate": "node scripts/validate.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
