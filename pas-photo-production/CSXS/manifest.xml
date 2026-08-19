@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.pfpm.pasfoto" ExtensionBundleVersion="2.4.0" ExtensionBundleName="Pas Foto Production Manager" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtensionList>
+    <Extension Id="com.pfpm.pasfoto.panel" Version="2.4.0"/>
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="ILST" Version="[25.0,99.9]"/>
+    </HostList>
+    <LocaleList>
+      <Locale Code="All"/>
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="9.0"/>
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.pfpm.pasfoto.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./client/index.html</MainPath>
+          <ScriptPath>./host/main.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--allow-file-access</Parameter>
+            <Parameter>--allow-file-access-from-files</Parameter>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Pas Foto Production Manager</Menu>
+          <Geometry>
+            <Size>
+              <Height>760</Height>
+              <Width>420</Width>
+            </Size>
+            <MinSize>
+              <Height>420</Height>
+              <Width>340</Width>
+            </MinSize>
+            <MaxSize>
+              <Height>2400</Height>
+              <Width>900</Width>
+            </MaxSize>
+          </Geometry>
+          <Icons>
+            <Icon Type="Normal">./CSXS/panel-icon.svg</Icon>
+            <Icon Type="RollOver">./CSXS/panel-icon-R.svg</Icon>
+            <Icon Type="DarkNormal">./CSXS/panel-icon-D.svg</Icon>
+            <Icon Type="DarkRollOver">./CSXS/panel-icon-DR.svg</Icon>
+          </Icons>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
