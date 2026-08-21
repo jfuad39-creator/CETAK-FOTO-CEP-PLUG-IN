@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="10.0" ExtensionBundleId="com.internal.pasfoto.production"
+                   ExtensionBundleVersion="2.3.0"
+                   ExtensionBundleName="Pas Foto Print"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtensionList>
+    <Extension Id="com.internal.pasfoto.production.panel" Version="2.3.0" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="ILST" Version="[25.0,99.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="10.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.internal.pasfoto.production.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./client/index.html</MainPath>
+          <ScriptPath>./host/main.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--allow-file-access</Parameter>
+            <Parameter>--allow-file-access-from-files</Parameter>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Pas Foto Print</Menu>
+          <Geometry>
+            <Size><Height>760</Height><Width>420</Width></Size>
+            <MinSize><Height>420</Height><Width>340</Width></MinSize>
+            <MaxSize><Height>2400</Height><Width>900</Width></MaxSize>
+          </Geometry>
+          <Icons>
+<Icon Type="Normal">./CSXS/panel-icon.png</Icon>
+<Icon Type="RollOver">./CSXS/panel-icon-R.png</Icon>
+<Icon Type="DarkNormal">./CSXS/panel-icon-D.png</Icon>
+<Icon Type="DarkRollOver">./CSXS/panel-icon-DR.png</Icon>
+          </Icons>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
